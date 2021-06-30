@@ -9,8 +9,8 @@
   --clr-heading-350: hsl(0, 0%, 100%);
   --clr-text-400: hsla(0, 0%, 100%, 0.75);
 
-  --ff-body: "Inter", sans-serif;
-  --ff-heading: "Lexend Deca", sans-serif;
+  --ff-body: "Lexend Deca", sans-serif;
+  --ff-heading: "Inter", sans-serif;
 }
 
 body {
@@ -38,7 +38,10 @@ h6 {
 
 .card {
   text-align: center;
+  max-width: 35rem;
   background: var(--clr-surface);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .card__header {
@@ -55,7 +58,7 @@ h6 {
 .card__body {
   display: grid;
   gap: 1.25rem;
-  padding: 2em 1em;
+  padding: 2em 0.75em;
 }
 
 .card__heading {
@@ -64,6 +67,29 @@ h6 {
 
 .card__desc {
   margin: 0 1.75rem;
+}
+
+.card__data {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.card__data-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__data-item h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card__data-item p {
+  margin-top: 0.25rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
 }
 
 .highlight {
