@@ -38,27 +38,23 @@ h6 {
 
 .card {
   text-align: center;
-  max-width: 35rem;
   background: var(--clr-surface);
+  max-width: 32rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .card__header {
   background-image: url("images/image-header-mobile.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
   background-color: var(--clr-accent-400);
+  background-size: cover;
   background-blend-mode: multiply;
   width: 100%;
-  height: 0;
-  padding-top: 73.4%;
+  height: 15rem;
 }
 
 .card__body {
-  display: grid;
-  gap: 1.25rem;
-  padding: 2em 0.75em;
+  padding: 3em 2rem;
 }
 
 .card__heading {
@@ -66,14 +62,13 @@ h6 {
 }
 
 .card__desc {
-  margin: 0 1.75rem;
+  margin-top: 1.5rem;
 }
 
 .card__data {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1.5rem;
-  padding-bottom: 2rem;
+  margin-top: 3rem;
+  gap: 1.75rem;
 }
 
 .card__data-item {
@@ -88,10 +83,36 @@ h6 {
 
 .card__data-item p {
   margin-top: 0.25rem;
-  font-weight: 200;
   letter-spacing: 0.1em;
 }
 
 .highlight {
   color: var(--clr-accent-400);
+}
+
+@media screen and (min-width: 64rem) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 64rem;
+  }
+
+  .card__header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-image: url("images/image-header-desktop.jpg");
+    height: auto;
+  }
+
+  .card__body {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: left;
+    padding: 4rem 5rem;
+  }
+
+  .card__data {
+    grid-auto-flow: column;
+    margin-top: 5rem;
+  }
 }
